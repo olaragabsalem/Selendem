@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" thread-count="10">
+    <listeners>
+        <listener class-name="test.Listener"/>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="practice test methods module" parallel="methods" thread-count="4">
+        <classes>
+            <class name="test.practicetestNG">
+            <methods>
+                <include name="Demo.*"/>
+
+            </methods>
+        </class>
+            <class name="test.day2" >
+                <methods>
+                    <include name="helloworld2"/>
+                    <include name="helloworld"/>
+                    <include name="login"/>
+                </methods>
+            </class>
+        </classes>
+
+<!--        <packages>-->
+<!--   useful for regression run         <package name="test"/>-->
+<!--        </packages>-->
+    </test>
+</suite>
